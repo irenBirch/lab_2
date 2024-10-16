@@ -24,7 +24,7 @@ h2 {
 h1 {
   text-align: center;
   position: absolute;
-  top: 37%;
+  top: 290px;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -32,12 +32,13 @@ h1 {
 .main-banner {
   background-image: url(banner.jpeg);
   background-size: 100%;
-  padding: 45px;
+  background-repeat: no-repeat;
+  
   font-size: 36px;
 }
 .main-banner img {
   display: block;
-  margin-top: 25px;
+  
   margin-left: auto;
   margin-right: auto;
 }
@@ -51,7 +52,7 @@ a {
   margin: 0 auto;
   display: grid;
   padding: 0 15px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 }
 .container-head {
   max-width: 1200px;
@@ -113,24 +114,8 @@ nav a {
 
 .photoes img {
   height: 280px;
-  position: absolute;
-}
-.img1 {
-  top: 750px;
-  left: 180px;
-  z-index: 1;
-}
-.img2 {
-  top: 900px;
-  left: 340px;
-  z-index: 2;
 }
 
-.img3 {
-  top: 820px;
-  left: 500px;
-  z-index: 3;
-}
 .about-us {
   text-align: center;
   padding-left: 10px;
@@ -164,51 +149,186 @@ h3 {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  
 }
 
 .grid-item {
   padding: 20px;
   text-align: center;
+  width: 245px;
+  
 }
 
 .grid-item img {
   height: 280px;
-  width: 245px;
+  width: 100%;
   display: block;
 }
-
-.reviews, .schedule {
-  padding: 0 0;
-}
-#notice{
-  font-size: 16px;
-  font-weight: bold;
-  margin-left: 20px;
-}
-.schedule-table{
-  padding: 0 0;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-.reviews-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
-}
-
 .review {
+  display: block;
   padding: 20px;
   border: 1px solid #ddd;
   background-color: #d9d9d9;
   border-radius: 7%;
+  
+}
+.reviews-grid {
+  display: flex;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  align-items:center ;
 }
 
 footer {
   background-color: #5f3320;
   color: #fff;
-  padding: 20px 0;
+  padding: 10px 0;
   text-align: center;
 }
+
+
+/* Стилі для планшетної версії (від 768px до 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .container-head{
+  grid-template-columns: repeat(auto-fit, minmax(50px, 0.5fr));
+  gap: 10px;
+}
+.info{
+  gap: 10px;
+  align-items:center ;
+}
+  .hero .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+header{
+  height: 134px;
+  font-size: 18px;
+}
+  .main-banner {
+    font-size: 28px;
+    
+  }
+.main-banner img{
+  width: 100%;
+  height: 150px;
+  margin: 0;
+}
+  h1 {
+    top: 300px;
+  }
+nav a{
+  font-size: 22px;
+}
+nav ul{
+  padding: 20px 10px;
+}
+  .photoes img {
+    height: 240px;
+  }
+  .photoes{
+    align-content: center;
+  }
+}
+
+/* Стилі для мобільної версії (ширина екрану менше 768px) */
+@media screen and (max-width: 550px) {
+ .container{
+  display: flex;
+   flex-direction: column;
+ }
+  body{
+    font-size: 12px;
+  }
+header {
+  height: 40px;
+  padding: 10px 0;
+  font-size: 6px;
+}
+.contact-item{
+  width: 40px;
+}
+.container-head{
+  grid-template-columns: repeat(auto-fit, minmax(50px, 0.5fr));
+  gap: 10px;
+}
+.info{
+  gap: 10px;
+  align-items:center ;
+}
+.main-banner img{
+  width: 100%;
+  height: 50px;
+  margin: 0;
+}
+.info img {
+  margin-bottom: 20px;
+  width: 14px;
+  height: 14px;
+}
+.logo {
+  padding-left: 10px;
+  width: 40px; 
+  height: 40px; 
+}
+  .main-banner {
+    font-size: 24px;
+    padding: 10px;
+  }
+  .about-us{
+  grid-column: 2;
+    
+  }
+nav a{
+  font-size: 10px;
+}
+nav ul{
+  padding: 8px 0;
+}
+  nav li {
+    display: inline-block;
+    margin: 5px;
+    font-size: 10px;
+  }
+
+  .photoes img {
+    height: 150px;
+  }
+
+  h1 {
+    font-size: 28px;
+    top: 130px;
+  }
+  h2{
+    padding: 5px;
+    font-size: 20px;
+  }
+  .reviews-grid{
+    flex-direction: column;
+  } 
+  .review{
+    width: 50%;
+  }
+  .grid{
+    justify-items: center;
+  }
+}
+
+.reviews,
+.schedule {
+  padding: 0 0;
+}
+#notice {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+.schedule-table {
+  padding: 0 0;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+
 button {
   padding: 12px 20px;
   background-color: #c4b9b3;
@@ -288,10 +408,10 @@ th {
   vertical-align: middle;
   display: inline-block;
 }
-.container-prise tr{
-  margin-bottom: 20px;
+.container-prise tr {
   display: flex;
   justify-content: center;
+  margin-bottom: 20px;
 }
 .card:hover {
   transform: scale(1.05);
