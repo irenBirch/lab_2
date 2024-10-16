@@ -33,12 +33,12 @@ h1 {
   background-image: url(banner.jpeg);
   background-size: 100%;
   background-repeat: no-repeat;
-  
+
   font-size: 36px;
 }
 .main-banner img {
   display: block;
-  
+
   margin-left: auto;
   margin-right: auto;
 }
@@ -149,14 +149,12 @@ h3 {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  
 }
 
 .grid-item {
   padding: 20px;
   text-align: center;
   width: 245px;
-  
 }
 
 .grid-item img {
@@ -170,13 +168,12 @@ h3 {
   border: 1px solid #ddd;
   background-color: #d9d9d9;
   border-radius: 7%;
-  
 }
 .reviews-grid {
   display: flex;
   grid-gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  align-items:center ;
+  align-items: center;
 }
 
 footer {
@@ -186,104 +183,101 @@ footer {
   text-align: center;
 }
 
-
 /* Стилі для планшетної версії (від 768px до 1024px) */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .container-head{
-  grid-template-columns: repeat(auto-fit, minmax(50px, 0.5fr));
-  gap: 10px;
-}
-.info{
-  gap: 10px;
-  align-items:center ;
-}
+  .container-head {
+    grid-template-columns: repeat(auto-fit, minmax(50px, 0.5fr));
+    gap: 10px;
+  }
+  .info {
+    gap: 10px;
+    align-items: center;
+  }
   .hero .container {
     grid-template-columns: repeat(1, 1fr);
   }
-header{
-  height: 134px;
-  font-size: 18px;
-}
+  header {
+    height: 134px;
+    font-size: 18px;
+  }
   .main-banner {
     font-size: 28px;
-    
   }
-.main-banner img{
-  width: 100%;
-  height: 150px;
-  margin: 0;
-}
+  .main-banner img {
+    width: 100%;
+    height: 150px;
+    margin: 0;
+  }
   h1 {
     top: 300px;
   }
-nav a{
-  font-size: 22px;
-}
-nav ul{
-  padding: 20px 10px;
-}
+  nav a {
+    font-size: 22px;
+  }
+  nav ul {
+    padding: 20px 10px;
+  }
   .photoes img {
     height: 240px;
   }
-  .photoes{
+  .photoes {
     align-content: center;
   }
 }
 
 /* Стилі для мобільної версії (ширина екрану менше 768px) */
 @media screen and (max-width: 550px) {
- .container{
-  display: flex;
-   flex-direction: column;
- }
-  body{
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  body {
     font-size: 12px;
   }
-header {
-  height: 40px;
-  padding: 10px 0;
-  font-size: 6px;
-}
-.contact-item{
-  width: 40px;
-}
-.container-head{
-  grid-template-columns: repeat(auto-fit, minmax(50px, 0.5fr));
-  gap: 10px;
-}
-.info{
-  gap: 10px;
-  align-items:center ;
-}
-.main-banner img{
-  width: 100%;
-  height: 50px;
-  margin: 0;
-}
-.info img {
-  margin-bottom: 20px;
-  width: 14px;
-  height: 14px;
-}
-.logo {
-  padding-left: 10px;
-  width: 40px; 
-  height: 40px; 
-}
+  header {
+    height: 40px;
+    padding: 10px 0;
+    font-size: 6px;
+  }
+  .contact-item {
+    width: 40px;
+  }
+  .container-head {
+    grid-template-columns: repeat(auto-fit, minmax(50px, 0.5fr));
+    gap: 10px;
+  }
+  .info {
+    gap: 10px;
+    align-items: center;
+  }
+  .main-banner img {
+    width: 100%;
+    height: 50px;
+    margin: 0;
+  }
+  .info img {
+    margin-bottom: 20px;
+    width: 14px;
+    height: 14px;
+  }
+  .logo {
+    padding-left: 10px;
+    width: 40px;
+    height: 40px;
+  }
   .main-banner {
     font-size: 24px;
     padding: 10px;
   }
-  .about-us{
-  grid-column: 2;
-    
+  .about-us {
+    grid-column: 2;
   }
-nav a{
-  font-size: 10px;
-}
-nav ul{
-  padding: 8px 0;
-}
+  nav a {
+    font-size: 10px;
+  }
+  nav ul {
+    padding: 8px 0;
+  }
   nav li {
     display: inline-block;
     margin: 5px;
@@ -298,21 +292,26 @@ nav ul{
     font-size: 28px;
     top: 130px;
   }
-  h2{
+  h2 {
     padding: 5px;
     font-size: 20px;
   }
-  .reviews-grid{
+  .reviews-grid {
     flex-direction: column;
-  } 
-  .review{
+  }
+  .review {
     width: 50%;
   }
-  .grid{
+  .grid {
     justify-items: center;
   }
 }
-
+/* Логічні оператори */
+@media screen and (min-width: 600px) and (orientation: landscape) {
+  .review {
+    background-color: rgb(184, 170, 170);
+  }
+}
 .reviews,
 .schedule {
   padding: 0 0;
@@ -327,7 +326,6 @@ nav ul{
   max-width: 1400px;
   margin: 0 auto;
 }
-
 
 button {
   padding: 12px 20px;
